@@ -1,0 +1,95 @@
+
+/* comment goes here*/
+
+h1 {
+    font-weight: bold;
+    font-size: 22pt;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18pt;
+    text-align: left;
+    font-weight: normal;
+}
+
+.headings {
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+}
+
+body {
+    background-color: white;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Unicode', 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+a {
+    color: #A4A400;
+}
+
+ul.pie {
+    list-style-type: none;
+    padding: 0;
+}
+
+span {
+    text-decoration: underline;
+}
+
+span.strike{
+    text-decoration: line-through;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+
+  /* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .comments-section {
+      margin-left: 5%;
+      margin-right: 5%;
+      
+  }
+
+pre {
+      font-style: italic;
+      background-color: #ffffa8;
+  }
+
+p.right {
+      text-align: right;
+  }
+
+.left {
+      float: left;
+  }
+
+.right {
+    float: right;
+}

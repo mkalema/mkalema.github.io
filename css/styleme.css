@@ -41,3 +41,24 @@ p::first-letter {
 ul {
     list-style-type: none;
 }
+
+ol {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li {
+    flex: 0 0 auto;
+}
+
+  .flex-container {
+      display: flex;
+  }
+
+  .flex-child {
+      flex: 1;
+  }
+
+  .flex-child:first-child {
+    margin-right: 20px;
+}
