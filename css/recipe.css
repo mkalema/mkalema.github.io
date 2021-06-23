@@ -74,17 +74,19 @@ span.strike{
   .comments-section {
       margin-left: 5%;
       margin-right: 5%;
-      
   }
 
 pre {
-      font-style: italic;
-      background-color: #ffffa8;
+    font-style: italic;
+    background-color: #ffffa8;
   }
 
 p.right {
       text-align: right;
   }
+code.right {
+    text-align: right;
+}
 
 .left {
       float: left;
