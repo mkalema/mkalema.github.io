@@ -79,6 +79,7 @@ span.strike{
 pre {
     font-style: italic;
     background-color: #ffffa8;
+    white-space: pre-wrap;
   }
 
 p.right {
