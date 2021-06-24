@@ -1,0 +1,146 @@
+/*
+Author: Moses Kalema 
+File: movie.css
+Description: This is the css file for tmnt.html under the assignment w1d3 moview review 
+*/
+
+body {
+    background-image: url('../images/movieReview/background.png');
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+    font-size: 8px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.banner {
+    background-image: url("../images/movieReview/bannerbg.png");
+    
+}
+
+.banner img {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    text-shadow:  4px 4px 2px #999999;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+div.main {
+    width: 800px;
+    border: 4px solid #808080;
+    border-radius: 20px;
+    position: relative;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar {
+    position: absolute;
+    left: 550px;
+    overflow: hidden;
+    background-color: #A2B964;
+}
+
+.sidebar img {
+    border-radius: 0px 15px 0px 0px;
+    margin: 0px;
+}
+
+.sidebar dl {
+    margin-left: 10px;
+    font-size: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.reviews {
+    width: 550px;
+    overflow: hidden;
+}
+
+.rotten  {
+    background-image: url('../images/movieReview/rbg.png');
+    background-repeat: repeat-x;
+    font-size: 48pt;
+    color: red;
+    height: 83pt;
+}
+
+.rotten img {
+    vertical-align: center;
+    margin-bottom: -.2em;
+}
+
+.review-left, .review-right{
+    width: 47%;
+    float: left;
+}
+
+.review-left {
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+.review-right {
+    margin-left: 1%;
+    margin-right: 2%;
+}
+
+.review-box {
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E8DC9B;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 8px;
+    
+}
+
+.review-box img{
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.reviewer-box {
+    margin-bottom: 20px;
+}
+
+.reviewer-box img{
+    margin-right: 5px;
+    float: left;
+}
+
+
+.footer {
+    margin: 0;
+    width: 100%;
+    background-color: #A2B964;
+}
+
+.footer p {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.validators {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+.validators p {
+    margin: 0;
+}
