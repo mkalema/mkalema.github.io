@@ -1,0 +1,73 @@
+/*
+Author: Moses Kalema
+File: movie.css
+Description: This is the css file for responsivewebsite.html under the assignment w1d4
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 60px 40px 450px 60px;
+}
+
+.header {
+    background-color: #a1dae8;
+    text-align: center;
+}
+
+.menu {
+    background-color: #245050;
+    color: white;
+    display: flex;
+}
+
+.menu > a {
+    padding: 14px 20px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column1 {
+    background-color: #aaaaaa;
+    width: 25%;
+}
+.column2 {
+    background-color: #bbbbbb;
+    width: 50%;
+}
+.column3 {
+    background-color: #cccccc;
+    width: 25%;
+}
+
+@media screen and (max-width: 600px){
+    .column1, .column3{
+        flex: 50%;
+        max-width: 50%;
+        flex-direction: row;
+    }
+    .column2{
+        flex:100%;
+        max-width: 100%;
+        order: 3;
+    }
+}
+.footer {
+    background-color: #245050;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
