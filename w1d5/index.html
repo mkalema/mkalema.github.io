@@ -35,12 +35,14 @@
         }
         console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
         console.log("Expected output of max(10,30) is 30  " + myFunctionTest(30, max(10, 30)));
+        console.assert(10 === max(20, 10), "Expected output of max(20,10) is 20");
 
         /* function maxOfThree() that takes three numbers as arguments and returns the largest of them */
         function maxOfThree(number1, number2, number3){
             return max(max(number1, number2), number3);
         }
         console.log("Expected output of maxOfThree(20,10, 30) is 30  " + myFunctionTest(30, maxOfThree(20, 10, 30)));
+        console.assert(20 === maxOfThree(20, 10, 30), "Expected output of maxOfThree(20, 10, 30) is 30");
 
         /* function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise */
         function isVowel(input) {// a, e, i, o, u
@@ -49,6 +51,7 @@
 
         }
         console.log("Expected output of isVowel(o) is true  " + myFunctionTest(true, isVowel("o")));
+        console.assert(isVowel("d"), "Expected output of isVowel(\"d\") is false");
 
         /* function sum() that sums all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10.*/
         function sum(array){
@@ -60,6 +63,7 @@
             return result;
         }
         console.log("Expected output of sum([1,2,3,4]) is 10  " + myFunctionTest(10, sum([1,2,3,4])));
+        console.assert(8 === sum([1,2,3,4]), "Expected output of sum([1,2,3,4]) is 10");
 
         /* function multiply() that multiplies all the numbers in an array of numbers. For example, multiply([1,2,3,4]) should return 24.*/
         function multiply(array){
@@ -71,6 +75,7 @@
             return result;
         }
         console.log("Expected output of multiply([1,2,3,4]) is 24 " + myFunctionTest(24, multiply([1,2,3,4])));
+        console.assert(25 === multiply([1,2,3,4]), "Expected output of multiply([1,2,3,4]) is 24");
 
         /* function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj"*/
         function reverse(input){
@@ -84,6 +89,7 @@
         }
 
         console.log("Expected output of reverse('kalema') is amelak " + myFunctionTest("amelak", reverse("kalema")));
+        console.assert("amelka" === reverse("kalema"), "Expected output of reverse('kalema') is amelak");
 
         /* function findLongestWord() that takes an array of words and returns the length of the longest one */
         function findLongestWord(array){
@@ -97,6 +103,7 @@
         }
 
         console.log("Expected output of findLongestWord('kalema','moses', 'bogdanavic', 'cool') is bogdanavic " + myFunctionTest("bogdanavic", findLongestWord(["kalema","moses", "bogdanavic", "cool"])));
+        console.assert("kalema" === findLongestWord(["kalema","moses", "bogdanavic", "cool"]), "\"Expected output of findLongestWord('kalema','moses', 'bogdanavic', 'cool') is bogdanavic");
 
         /* function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i */
         function filterLongWords(array, n){
@@ -110,6 +117,7 @@
         }
 
         console.log("Expected output of filterLongWords(['kalema','moses', 'bogdanavic', 'cool'], 5) is ['kalema','bogdanavic'] " + myFunctionTest(["kalema","bogdanavic"], filterLongWords(["kalema","moses", "bogdanavic", "cool"], 5)));
+        console.assert(["bogdanavic","kalema"].toString() === filterLongWords(["kalema","moses", "bogdanavic", "cool"], 5).toString(), "Expected output of filterLongWords(['kalema','moses', 'bogdanavic', 'cool'], 5) is ['kalema','bogdanavic']");
 
         /* number 8 */
         function number8(){
@@ -118,16 +126,19 @@
                 return elem * 10;
             });
             console.log("Expected output when multiplied elements by 10 is [10,30,50,30,30] " + myFunctionTest([10, 30, 50, 30, 30], multipliedBy10));
+            console.assert([10, 30, 50, 30, 40].toString() === multipliedBy10.toString(), "Expected output when multiplied elements by 10 is [10,30,50,30,30]");
 
             const equalTo3 = a.filter(function (element) {
                 return element === 3;
             });
             console.log("Expected output of elements equal to 3 [3,3,3] " + myFunctionTest([3, 3, 3], equalTo3));
+            console.assert([3, 3, 4].toString() === equalTo3.toString(), "Expected output of elements equal to 3 [3,3,3]");
 
             const product = a.reduce(function (prevValue, currValue) {
                 return prevValue * currValue;
             })
             console.log("Expected output of product of all elements  " + myFunctionTest(135, product));
+            console.assert(134 === product, "Expected output of product of all elements");
         }
 
         // execute function
