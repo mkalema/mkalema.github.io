@@ -44,3 +44,14 @@ textarea {
 	font-weight: normal;
 	text-decoration: none;
 }
+
+.body-background{
+	/* Image not found at url */
+	background-image: url("http://www.cs.washington.edu/education/courses/190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg");
+
+	/*../images/recipeImages/background.gif*/
+}
+
+.body-background-none{
+	background-image: none;
+}

@@ -35,13 +35,16 @@ window.onload = function () {
         if(checkBoxElement.checked === true){
             //alert("Checkbox checked"); // commented out alert
             textAreaElement.className = "checked";
+
+            // set background image
+            let body = document.getElementsByTagName("body");
+            body[0].className = "body-background";
         }else{
             textAreaElement.className = "unchecked";
+            let body = document.getElementsByTagName("body");
+            body[0].className = "";
         }
 
-        // set background image
-        let body = document.getElementsByTagName("body");
-        body[0].style.backgroundImage = 'url("../../images/recipeImages/background.gif")';
 
 
     }
@@ -63,13 +66,13 @@ window.onload = function () {
         text = text.trim();
 
         // if string has legnth less than 1
+
+        let word = "";
         if(text.length <= 1){
             word = text.substr(1) +  "-ay";
         }
 
         let firstLetter  = text.charAt(0);
-
-        let word = "";
 
         if(  !isVowel(firstLetter) ){
             word = text.substr(1) + firstLetter + "-ay";
