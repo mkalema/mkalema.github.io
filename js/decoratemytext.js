@@ -33,7 +33,7 @@ window.onload = function () {
     function checkBox(){
         console.log("Check box onchange ")
         if(checkBoxElement.checked === true){
-            alert("Checkbox checked");
+            //alert("Checkbox checked"); // commented out alert
             textAreaElement.className = "checked";
         }else{
             textAreaElement.className = "unchecked";
