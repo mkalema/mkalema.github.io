@@ -89,13 +89,17 @@ window.onload = function () {
 
     // igpay button
     function malkovitch(){
-        console.log("reached")
+        console.log("reached");
         let text = textAreaElement.value;
+
         text = text.trim();
+
+        console.log("Text Area : " + text);
         let array = text.split(" ");
 
+        console.log(array.toString());
         for(let i=0; i<array.length; i++){
-            if(array[i] >= 5){
+            if(array[i].length >= 5){
                 array[i] = "Malkovitch";
             }
         }
