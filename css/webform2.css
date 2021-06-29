@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 70px 600px ;
+}
+
+.mum-text {
+    padding: 15px;
+    font-weight: bold;
+}
+
+.menu {
+    background-color: #2ca2e6;
+    color: white;
+    display: grid;
+    grid-template-columns: 30% 10% 15% 45%;
+    padding: 5px;
+
+}
+
+.menu > a {
+    text-align: center;
+    padding: 14px;
+    border-left: 1px solid white;
+    margin: 10px;
+}
+
+.signout {
+    float: right;
+}
+
+.signout > button {
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    margin-right: 20px;
+}
+
+.signout > span {
+    margin-right: 10px;
+}
+
+.form {
+    margin: 50px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 40px;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input, select {
+    display: block;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    height: 45px;
+    border-radius: 4px;
+    padding: 10px;
+    color: #7a7c7f;
+    font-size: 16px;
+}
+
+form p {
+    margin: 0;
+}
+
+.form h3 {
+    font-weight: lighter;
+}
+
+form div {
+    float: right;
+    text-align: right;
+}
+
+form button {
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    margin-right: 20px;
+}
+
+#resetBtn {
+    border-color: #194d7f;
+    color: #194d7f;
+}
+
+#cancelBtn {
+    border-color: #dd5600;
+    color: #dd5600;
+}
+
+#addProductBtn {
+    border-color: #7bc5f0;
+    color: #7bc5f0;
+}
+.footer {
+    background-color: #000000;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
