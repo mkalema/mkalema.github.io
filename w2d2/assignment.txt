@@ -1,0 +1,33 @@
+Question 1:
+undefined889101
+
+undefined: x is initialized but not declared since javascript only hoists declarations and not initializations
+
+8: the passed argument a to function 8 to function c
+
+8: the passed argument a which is 8 is assigned to b and printed in same function
+
+9: b is 9 which was argument passed to function c. the b in inner function f "dies" when function is done execution
+
+10: b is 10 from the global variable. the b in function c is now "dead" because c is done executing
+
+1: x is now 1 from global variable
+
+
+Question 2:
+Global scope means variables are accessed from anywhere in the javascript program whereas local scope means they can only be accessed within a function
+
+Question 3:
+a) No : variables defined inside a function are not accesible from outside the function
+b) Yes : functions can access global variables or variables in scope enclosing it
+c) No : variables defined inside a function are not accesible from outside the function
+d) Yes : functions can access global variables or variables in scope enclosing it
+e) Yes : functions can access global variables or variables in scope enclosing it. C is inside B which is inside A . we can say C is enclosed in A
+
+Question 4:
+81 : x is declared and assigned before function call so it has value 9
+25: x is reassigned to 5 before second function call and so has value 5 instead of 9
+
+Question 5:
+10 : when function bar is called local variable is foo is hoisted and so has value undefined. The check !foo evaluates to true and then assignment to 10 is done
+alert now prints value in foo which is 10
