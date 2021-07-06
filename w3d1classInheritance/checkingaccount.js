@@ -10,7 +10,7 @@ class CheckingAccount extends Account{
      * */
     constructor (number, overdraftlimit) {
         super(number);
-        this.overdraftlimit = overdraftlimit;
+        this._overdraftlimit = overdraftlimit;
     }
 
     /**
@@ -49,7 +49,8 @@ class CheckingAccount extends Account{
 
     endOfMonth(){
         if(this._balance < 0){
-            return 'Warning, low balance CheckingAccount ' + this.getNumber() + ': balance: ' + this.getBalance() + 'overdraft limit: ' + this.getOverdraftlimit();
+            return 'Warning, low balance CheckingAccount ' + this.getNumber() + ': balance: ' + this.getBalance()
+                + ' overdraft limit: ' + this.getOverdraftlimit();
         }
     }
 }

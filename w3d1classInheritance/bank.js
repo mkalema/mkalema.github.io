@@ -27,7 +27,7 @@ class Bank{
     }
 
     closeAccount(number){
-        this._accounts = this._accounts.filter(acc => acc.getNumber() != number);
+        this._accounts = this._accounts.filter(acc => acc.getNumber() !== number);
     }
 
     accountReport(){
@@ -43,4 +43,10 @@ class Bank{
             .reduce((accum,currentStr) => accum + currentStr + "\n", "");
 
     }
+
+    // Auxilliary function to help access accounts array
+    getAccounts(){
+        return this._accounts;
+    }
+
 }

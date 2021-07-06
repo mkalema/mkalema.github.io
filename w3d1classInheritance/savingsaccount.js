@@ -55,7 +55,7 @@ class SavingsAccount extends Account{
 
     endOfMonth(){
         this.addInterest();
-        return 'Interest added SavingsAccount' +  this._number + ': balance: ' + this._balance + 'interest: ' + this._interest;
+        return 'Interest added SavingsAccount ' +  this.getNumber() + ': balance: ' + this.getBalance() + 'interest: ' + this.getInterest();
     }
 
 }
