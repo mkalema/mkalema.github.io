@@ -41,14 +41,16 @@ $(function (){
     }
 
     function growCircles(growAmount, growRate){
-        setInterval(function(){
-            $(".circle").css("width", function(idx, old){
-                return parseInt(old) + growAmount + "px";
-            });
-            $(".circle").css("height", function(idx, old){
-                return parseInt(old) + growAmount + "px";
-            });
-        }, growRate);
+        setInterval(grow, growRate, growAmount);
+    }
+
+    function grow(growAmount) {
+        $(".circle").css("width", function(idx, old){
+            return parseInt(old) + growAmount + "px";
+        });
+        $(".circle").css("height", function(idx, old){
+            return parseInt(old) + growAmount + "px";
+        });
     }
 
     function generateRandomInteger(min, max) {
