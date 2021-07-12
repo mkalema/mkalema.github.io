@@ -1,0 +1,27 @@
+<%- include('../fragments/header.ejs') %>
+<body>
+<h1>My Shopping Cart</h1>
+<table>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Action</th>
+    <tbody>
+    <% for (const shopping of shoppinglist) { %>
+        <tr>
+            <td><%= shopping.product.id %></td>
+            <td><%= shopping.product.name %></td>
+            <td><%= shopping.product.price %></td>
+            <td><%= shopping.quantity %></td>
+            <td>
+                <form action="/addToCart" method="post">
+                    <button type="submit" name="submit">Remove</button>
+                </form>
+            </td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+<h3>Total: <%= total %>/=</h3>
+<%- include('../fragments/footer.ejs') %>

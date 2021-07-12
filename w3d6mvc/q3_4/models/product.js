@@ -16,4 +16,8 @@ module.exports = class Product {
     static getAll(){
         return products;
     }
+
+    static removeAll() {
+        products.length = 0;
+    }
 }

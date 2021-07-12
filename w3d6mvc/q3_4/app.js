@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 
-const productRouter = require('./controllers/product');
+//const productRouter = require('./controllers/product');
+
+const router = require("./routers/router");
 
 const app = express();
 app.set('port', process.env.PORT || 3000);
@@ -14,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', productRouter);
+app.use("/", router);
 
 const port = app.get('port');
 app.listen(port, () => {
