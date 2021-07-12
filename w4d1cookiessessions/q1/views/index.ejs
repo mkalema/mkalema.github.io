@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> <%= pageTitle %></title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin: 30px;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<form action="/result" method="post">
+    <label>Cookie Key </label> <input name="cookieKey">
+    <label>Cookie Value  </label> <input name="cookieValue">
+    <button type="submit">Submit</button>
+</form>
+
+<table >
+    <th>Key</th>
+    <th>Value</th>
+    <tbody>
+        <% for (const cookie of cookies) { %>
+            <tr>
+                <td><%= cookie.name %></td>
+                <td><%= cookie.value %></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+</body>
+</html>
