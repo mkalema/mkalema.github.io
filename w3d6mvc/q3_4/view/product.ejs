@@ -1,0 +1,26 @@
+<%- include('../fragments/header.ejs') %>
+<body>
+<h1>Products List</h1>
+<table>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Action</th>
+    <tbody>
+    <% for (const product of products) { %>
+        <tr>
+            <td><%= product.id %></td>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td><%= product.description %></td>
+            <td>
+                <form action="/addToCart" method="post">
+                    <button type="submit" name="submit">Add to Cart</button>
+                </form>
+            </td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+<%- include('../fragments/footer.ejs') %>
