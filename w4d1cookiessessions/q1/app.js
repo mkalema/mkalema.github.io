@@ -26,11 +26,8 @@ app.post("/result", (req, res) => {
     let cookieValue = req.body.cookieValue;
 
     if(cookieKey){
-        //cookies.push({key : cookieKey, value: cookieValue});
         res.cookie(cookieKey, cookieValue, {maxAge: 1000 * 60 * 60 * 24 * 7});//res.cookie('name', 'GeeksForGeeks').send()
     }
-    console.log(req.cookies);
-
     res.redirect('back');
 });
 
