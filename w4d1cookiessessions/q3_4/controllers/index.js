@@ -7,7 +7,6 @@ exports.getAllProducts = (req, res, next) => {
     (new Product(3, "Germany", 120, "Football made in Germany")).save();
     (new Product(4, "Spain", 50, "Tik Taka")).save();
     (new Product(5, "Portugal", 30, "Finesse")).save();
-
     const products = Product.getAll();
 
     res.render('product', {products: products, pageTitle: "All Products"});
@@ -19,8 +18,6 @@ exports.getShoppingCart = (req, res, next) => {
     let total = 0;
 
     for (const value of products){
-        console.log("Value: " );
-        console.log( value);
         total += (value.quantity * value.product.price);
     }
 
