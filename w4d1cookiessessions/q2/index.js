@@ -1,10 +1,18 @@
 const express = require('express');
+const path = require('path');
+const session = require('express-session');
+
 const app = express();
 
 app.use(express.urlencoded({extended:false}));
-const path = require('path');
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.set('port', process.env.PORT || 3000);
+app.use(session({
+    resave: false, // don't save session if unmodified
+    saveUninitialized: false, // don't create session until something stored
+    secret: 'salt for cookie signing',
+}));
+
 app.get('/', (req, res) => {
 
     const date = new Date();
@@ -31,30 +39,22 @@ app.get('/', (req, res) => {
 
 });
 
-
 app.post('/result', (req, res) => {
 
-    let name = req.body.name;
-    let age = req.body.age;
-    if (!name) {
-        name = "person";
+    const name = req.body.name ? req.body.name : 'person';
+    const age = req.body.age ? req.body.age : 'unknown';
+
+    req.session.person = {
+        name: name,
+        age: age
     }
-    if (!age) {
-        age = "";
-    }
-    res.redirect(303,`/output?name=${name}&age=${age}`)
+
+    res.redirect(303, `/output`);
 });
 app.get('/output', (req, res) => {
 
-    let name = req.query.name;
-    let age = req.query.age;
-    if (!name) {
-        name = "person";
-    }
-    if (!age) {
-        age = "";
-    }
-    res.send(`Welcome ${name}. You are ${age} years old`);
+    const person = req.session.person;
+    res.send(`Welcome ${person.name}. You are ${person.age} years old`);
 
 });
 const port = app.get('port');
