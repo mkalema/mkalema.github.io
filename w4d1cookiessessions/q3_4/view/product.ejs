@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+<%- include('./fragments/header.ejs') %>
+<table>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Action</th>
+    <tbody>
+    <% for (const product of products) { %>
+        <tr>
+            <td><%= product.id %></td>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td><%= product.description %></td>
+            <td>
+                <form action="/addToCart" method="post">
+                    <input id="id" name="id" type="hidden" value=<%= product.id %>>
+                    <input id="name" name="name" type="hidden" value=<%= product.name %>>
+                    <input id="price" name="price" type="hidden" value=<%= product.price %>>
+                    <button type="submit" name="submit">Add to Cart</button>
+                </form>
+            </td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+<%- include('./fragments/header.ejs') %>
+<table>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Action</th>
+    <tbody>
+    <% for (const shopping of shoppinglist) { %>
+        <tr>
+            <td><%= shopping.product.id %></td>
+            <td><%= shopping.product.name %></td>
+            <td><%= shopping.product.price %></td>
+            <td><%= shopping.quantity %></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+<h3>Total: <%= total %>/=</h3>
+<a href="/">Back</a>
+</body>
+</html>
