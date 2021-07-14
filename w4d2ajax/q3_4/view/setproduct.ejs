@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= pageTitle %></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+</head>
+<body>
+<%- include('./fragments/header.ejs') %>
+<div>
+    <form id="addProduct" >
+        <input id="id" name="id" type="hidden" value="<%= id%>" >
+        <label>Product </label><input id="name" name="name" value="<%= name%>" disabled>
+        <label>Price </label><input id="price" name="price" value="<%= price%>" disabled>
+        <label>Quantity </label><input id="quantity" name="quantity" >
+        <button id="btnAddToCart" type="submit" >Add to Cart</button>
+    </form>
+</div>
+
+
+<div>
+    <a id="cartLink" href="/shoppingcart"> <span id="countText"><%= count !== undefined ? count : 0 %></span> Click to View Cart</a>
+</div>
+<div>
+    <a  href="/"> Back to Product List </a>
+</div>
+</body>
+</html>

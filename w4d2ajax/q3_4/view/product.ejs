@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= pageTitle %></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+</head>
+<body>
+<%- include('./fragments/header.ejs') %>
+<table id="table">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Action</th>
+    <tbody>
+    <% for (const product of products) { %>
+        <tr>
+            <td><%= product.id %></td>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td><%= product.description %></td>
+            <td>
+                <a href="/product?id=<%= product.id %>&name=<%= product.name%>&price=<%= product.price %>">Add To Cart</a>
+            </td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+
+</body>
+</html>
